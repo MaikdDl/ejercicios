@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta description="Ejercicios de Javascript">
+  <title>Ejercicios Javascript</title>
+</head>
+
+<body>
+  <script>
+    // Ejercicios obtenidos de la web https://tutobasico.com/basicos2-javascript/
+
+    // Ejercicio 1
+
+    // 'use strict';
+
+    // for (let i = 1; i <= 30; i++) {
+    //     for (let j = 0; j < i; j++) {
+    //         document.write(i);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // Ejercicio 2
+
+    // 'use strict';
+
+    // let num;
+
+    // do {
+    //     num = prompt("Introduzca un número, por favor:");
+    // } while (isNaN(num));
+
+    // if (num <= 0) {
+
+    //     num = prompt("El número introducido no es válido, por favor, introduzca un nuevo número");
+    // }
+    // for (let i = num; i >= 1; i--) {
+    //     for (let j = i; j >= 1; j--) {
+    //         console.log(i);
+    //         document.write(i);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // Ejercicio 3
+
+    // 'use strict';
+
+    // let num;
+
+    // do {
+    //     num = prompt("Introduzca un número entre 0 y 50, por favor:")
+    // } while (isNaN(num));
+
+    // if (num <= 0 || num > 50) {
+    //     num = prompt("El número introducido no es válido, por favor, introduzca un nuevo número");
+    // }
+
+    // for (let i = 1; i <= num; i++) {
+    //     for (let j = 1; j <= i; j++) {
+    //         document.write(j);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // Ejercicio 4
+
+    // for (let i = 1; i <= 500; i++) {
+    //   document.write(i)
+    //   if (i % 4 == 0) {
+    //     document.write(" (Múltiplo de 4)");
+    //   }
+    //   if (i % 9 == 0) {
+    //     document.write(" (Múltiplo de 9)");
+    //   }
+    //   document.write("<br>");
+    //   if (i % 5 == 0) {
+    //     document.write("<hr>");
+    //   }
+    // }
+
+    // Ejercicio 5
+
+    'use strict';
+
+    let fil;
+    let col;
+
+    do {
+      fil = prompt("Introduzca el número de filas, por favor:");
+    } while (isNaN(fil));
+
+
+    do {
+      col = prompt("Introduzca el número de columnas, por favor:");
+    } while (isNaN(col));
+
+    let res = fil * col;
+
+    document.write("<table border>");
+
+    for (let i = 0; i < fil; i++) {
+      document.write("<tr>");
+      for (let j = 0; j < col; j++) {
+        document.write("<td>");
+        document.write(res);
+        res--;
+        document.write("</td>");
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+
+
+
+  </script>
+</body>
+
+</html>

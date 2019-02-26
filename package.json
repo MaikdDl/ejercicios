@@ -1,0 +1,23 @@
+{
+  "name": "ejercicios",
+  "version": "1.0.0",
+  "description": "Ejercicios variados de Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaikdDl/ejercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaikdDl/ejercicios/issues"
+  },
+  "homepage": "https://github.com/MaikdDl/ejercicios#readme",
+  "dependencies": {
+    "eslint": "^5.14.1"
+  }
+}
