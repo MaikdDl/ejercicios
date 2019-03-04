@@ -113,6 +113,8 @@
 // Ejercicio 1
 // Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor
 
+//'use strict'
+
 // const edad1 = prompt("Introduzca la edad 1:");
 // const nombre1 = prompt("Introduzca el nombre 1:");
 
@@ -145,11 +147,15 @@
 // Ejercicio 2
 //Realiza un script que genere un número aleatorio entre 1 y 99
 
+//'use strict'
+
 // console.log(Math.floor(Math.random() * (99) + 1));
 
 
 // Ejercicio 3
 // Genera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno
+
+//'use strict'
 
 // const num1 = Math.floor(Math.random() * (99) + 1);
 
@@ -172,6 +178,8 @@
 // Ejercicio 4 
 // Realiza un script que imprima 14 resultados aleatorios de una quiniela 1 X 2.
 
+//'use strict'
+
 // let result = 0;
 
 // for (let i = 1; i < 15; i++) {
@@ -188,6 +196,8 @@
 // Ejercicio 1
 // Realiza un script que pida un texto y lo muestre en mayúsculas.
 
+//'use strict'
+
 // let texto = prompt("Introduzca un texto, por favor:");
 
 // console.log(texto.toUpperCase());
@@ -195,6 +205,8 @@
 // Ejercicio 2
 // Realiza un script que pida una cadena de texto y la muestre poniendo el signo – entre cada carácter 
 // sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+//'use strict'
 
 // let texto = prompt("Introduzca un texto, por favor:");
 // let separador = "";
@@ -208,3 +220,138 @@
 // Ejercicio 3
 // Realiza un script que cuente el número de vocales que tiene un texto.
 
+//'use strict'
+
+// let texto = prompt("Introduzca un texto, por favor:");
+// let vocales = 0;
+// texto = texto.toUpperCase();
+
+// console.log(texto);
+
+// for (let i = 0; i < texto.length; i++) {
+//     if (texto[i] == "A" || texto[i] == "E" || texto[i] == "I" || texto[i] == "O" || texto[i] == "U") {
+//         vocales++;
+//     }
+//     console.log(vocales);
+// }
+
+// document.write("El número de vocales es: " + vocales);
+
+
+// Ejercicio 4
+// Pedimos una cadena de texto que sabemos que puede contener paréntesis. Realiza un script que extraiga la cadena que se encuentra entre los paréntesis. 
+// Ejemplo: Si escribimoe el texto “Hola (que) tal” se mostrará “que”. Si no existe el signo “(“ mostrará una cadena vacía y si existe el signo “(“
+//pero no el signo “)” mostrará desde el primer paréntesis hasta el final.
+
+// 'use strict';
+
+// let texto = prompt("Introduzca un texto, por favor:");
+// let letras = "";
+// let flag = false;
+
+// for (let i = 0; i < texto.length; i++) {
+//   if (texto[i] == "(" || texto[i] == ")") {
+
+//     // ponemos un flag a true en plan empezamos a contar
+//     flag = !flag
+//   }
+
+//   if (flag) {
+//     if (texto[i] != "(" && texto[i] != ")") {
+//       letras = letras + texto[i];
+//     }
+//   }
+
+// }
+
+// document.write(letras);
+
+
+
+// Ejercicio 5
+// Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
+
+// 'use strict';
+
+// let texto = prompt("Introduzca un texto por favor:");
+// let alReves = "";
+
+// for (let i = (texto.length - 1); i >= 0; i--) {
+//   alReves = alReves + texto[i];
+// }
+
+// document.write(alReves);
+
+
+//Ejercicio 6
+// Realiza un script que pida un texto e indique si es un palíndromo. Ejemplo de palíndromo: “Dabale arroz a la zorra el abad”.
+
+// 'use strict';
+
+// let texto = prompt("Introduzca un palíndromo, por favor:");
+// let workText = texto.toUpperCase();
+// let pal = false;
+// let alReves = "";
+
+// workText = workText.replace(/ /g, "");
+
+// for (let i = (workText.length - 1); i >= 0; i--) {
+//   alReves = alReves + workText[i];
+// }
+
+// for (let i = 0; i <= (workText.length - 1); i++) {
+//   if (workText[i] != alReves[i]) {
+//     break;
+//   } else {
+//     pal = true;
+//   }
+// }
+
+// if (pal) {
+//   document.write(texto + ": El texto introducido es un palíndromo");
+// } else {
+//   document.write(texto + ": El texto introducido no es un palíndromo")
+// }
+
+// Ejercicios obtenidos de la web https://tutobasico.com/basicos-5-javascript/
+
+// Ejercicio 1 
+// Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado
+
+// 'use strict'
+
+// let texto = prompt("Introduzca un texto, por favor:");
+// let posición = 0;
+// let vocal;
+// texto = texto.toUpperCase();
+
+// console.log(texto);
+
+// for (let i = 0; i < texto.length; i++) {
+//   if (texto[i] == "A" || texto[i] == "E" || texto[i] == "I" || texto[i] == "O" || texto[i] == "U") {
+//     posición = i + 1;
+//     vocal = (texto[i]).toLowerCase();
+//     break;
+//   }
+// }
+
+// document.write("La primera vocal del texto es la '" + vocal + "', y se encuentra en la posición: " + posición);
+
+
+// Ejercicio 3
+// Realiza un script que muestre la serie de fibonacci hasta un número entre 1 y 100 pedido por teclado
+
+let num = prompt("Introduzca un número entre 1 y 100, por favor:");
+let numFib = 1;
+let numAnt = 0;
+
+console.log(num, numAnt, numFib);
+
+if (num >= 1 && num <= 100) {
+  debugger;
+  do {
+    numAnt = numFib;
+    numFib = numFib + numAnt;
+    console.log(numFib + " " + numAnt);
+  } while (numFib <= num);
+}
