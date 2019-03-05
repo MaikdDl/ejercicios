@@ -341,17 +341,245 @@
 // Ejercicio 3
 // Realiza un script que muestre la serie de fibonacci hasta un número entre 1 y 100 pedido por teclado
 
-let num = prompt("Introduzca un número entre 1 y 100, por favor:");
-let numFib = 1;
-let numAnt = 0;
 
-console.log(num, numAnt, numFib);
+// 'use strict';
 
-if (num >= 1 && num <= 100) {
+// let num = prompt("Introduzca un número entre 1 y 100, por favor:");
+// let numFib = 1;
+// let num1 = 0;
+// let num2 = 1;
+
+// if (num >= 1 && num <= 100) {
+
+//   document.write("La serie de Fibonacci hasta el número " + num + ":<br>" + num1 + "<br>");
+
+//   do {
+//     document.write(numFib + "<br>");
+//     numFib = num1 + num2;
+//     num1 = num2;
+//     num2 = numFib;
+
+//   } while (numFib <= num);
+// } else {
+//   alert("El número introducido no es válido");
+// }
+
+// El mismo ejercicio pero el número introducido es la cantidad de valores de la serie de Fibonacci 
+// (si el usuario introduce 5, se mostrarán los 5 primeros números de la serie)
+
+// 'use strict';
+
+// let num = prompt("Introduzca un número entre 1 y 100, por favor:");
+// let numFib = 1;
+// let contador = 0;
+// let num1 = 0;
+// let num2 = 1;
+
+// if (num >= 1 && num <= 100) {
+
+//   document.write("La serie de Fibonacci hasta el número " + num + ":<br>" + num1 + "<br>");
+//   contador++;
+//   do {
+//     document.write(numFib + "<br>");
+//     numFib = num1 + num2;
+//     num1 = num2;
+//     num2 = numFib;
+//     contador++;
+
+//   } while (contador < num);
+// } else {
+//   alert("El número introducido no es válido");
+// }
+
+
+// Realiza un juego de Piedra Papel Tijera contra el Pc
+
+// 'use strict';
+
+// let jugadaUsuario;
+// let jugadaPc;
+// let jugadas = 0;
+// let ganadas = 0;
+// let empate = 0;
+// let perdidas = 0;
+
+// do {
+
+//   jugadaUsuario = prompt("Introduzca una jugada:" + "/n" + "Piedra: 1 - Papel: 2 - Tijera: 3");
+
+//   while (jugadaUsuario < 1 || jugadaUsuario > 3) {
+//     alert("El número introducido no es válido");
+//     jugadaUsuario = prompt("Por favor, introduzca una jugada válida:" + "/n" + "Piedra: 1 - Papel: 2 - Tijera: 3");
+//   }
+
+//   jugadaPc = Math.floor(Math.random() * (3) + 1);
+
+//   jugadas++;
+
+//   if (jugadaUsuario == 1 && jugadaPc == 1) {
+//     alert("Piedra - Piedra: Empate");
+//     empate++;
+//   } else if (jugadaUsuario == 1 && jugadaPc == 2) {
+//     alert("Piedra - Papel: ¡Has perdido!");
+//     perdidas++;
+//   } else if (jugadaUsuario == 1 && jugadaPc == 3) {
+//     alert("Piedra - Tijera: Has ganado. ¡¡Enhorabuena!!");
+//     ganadas++;
+//   } else if (jugadaUsuario == 2 && jugadaPc == 1) {
+//     alert("Papel - Piedra: Has ganado. ¡¡Enhorabuena!!");
+//     ganadas++;
+//   } else if (jugadaUsuario == 2 && jugadaPc == 2) {
+//     alert("Papel - Papel: Empate");
+//     empate++;
+//   } else if (jugadaUsuario == 2 && jugadaPc == 3) {
+//     alert("Papel - Tijera: ¡Has perdido!");
+//     perdidas++;
+//   } else if (jugadaUsuario == 3 && jugadaPc == 1) {
+//     alert("Tijera - Piedra: ¡Has perdido!");
+//     perdidas++;
+//   } else if (jugadaUsuario == 3 && jugadaPc == 2) {
+//     alert("Tijera - Papel: Has ganado. ¡¡Enhorabuena!!");
+//     ganadas++;
+//   } else {
+//     alert("Tijera - Tijera: Empate");
+//     empate++;
+//   }
+// } while (confirm("¿Quieres volver a jugar"));
+
+// document.write("Partidas jugadas: " + jugadas + "<br>");
+// document.write("Partidas ganadas: " + ganadas + "<br>");
+// document.write("Partidas empatadas: " + empate + "<br>");
+// document.write("Partidas perdidas " + perdidas + "<br>");
+
+
+// Ejercicios obtenidos de la web https://tutobasico.com/ejercicios-de-javascript-6/
+
+// Ejercicio 1
+// Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en javascript
+
+// 'use strict';
+
+// function getPi() {
+//   return Math.PI.toFixed(2);
+// }
+
+// document.write(getPi());
+
+
+// Ejercicio 2
+// Crea una función que reciba un parámetro, un dni, y devuelva la letra del mismo. Si el dni pasado tiene algún error devolverá “”
+
+// let numDni = prompt("Introduzca el número de su DNI, por favor");
+// let letras = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"];
+
+// function calcularLetra() {
+//   while (numDni < 1 || numDni > 99999999) {
+//     alert("El número introducido no es válido");
+//     numDni = prompt("Por favor, introduzca un valor correcto");
+//   }
+//   let resto = numDni % 23;
+//   let letra = "";
+//   letra = letras[resto];
+
+//   return letra;
+// }
+
+// document.write(calcularLetra(numDni));
+
+
+// Ejercicio 3 
+// Crea una función que reciba 2 parámetros, precio e iva, y devuelva el precio con iva incluido.
+// Si no recibe el iva, aplicará el 21 por ciento por defecto.
+
+// 'use strict';
+
+// let precio = prompt("Por favor, introduzca el precio del producto");
+// let iva = prompt("Por favor, introduca el IVA aplicable (si no introduce ninguno se aplicará el 21%");
+// let precioIva;
+// let precioFinal;
+
+// precio = parseInt(precio);
+// iva = parseInt(iva);
+
+// if (iva == undefined) {
+//   iva = 21;
+// }
+
+// function calcularIva(precio, iva) {
+//   precioIva = (precio * iva) / 100;
+//   document.write("Precio: " + precio + "<br>Iva: " + iva + "<br>");
+//   precioFinal = precio + precioIva;
+//   return precioFinal;
+// }
+
+// document.write("El precio con IVA incluído es: " + calcularIva(precio, iva));
+
+
+// Ejercicio 4 
+// Crea una función que reciba un texto y lo devuelva al revés
+
+// 'use strict';
+
+// let texto = prompt("Introduzca un texto por favor:");
+// let alReves = "";
+
+// function textoDelReves(texto) {
+//   for (let i = (texto.length - 1); i >= 0; i--) {
+//     alReves = alReves + texto[i];
+//   }
+//   return alReves;
+// }
+
+// document.write(textoDelReves(texto));
+
+
+// Ejercicio 5
+// Crea una función que genere número entero aleatorio entre min y max, que serán pasados como parámetros. Por defecto min = 1 y max = 100
+
+// 'use strict';
+
+// let numMin = prompt("Por favor, introduce el número mínimo:");
+
+// if (numMin == "") {
+//   numMin = 1;
+// }
+// numMin = parseInt(numMin);
+
+// let numMax = prompt("Por favor, introduce el número máximo:");
+
+// if (numMax == "") {
+//   numMax = 100;
+// }
+// numMax = parseInt(numMax);
+
+// function aleatorio(max, min) {
+
+//   let numAleatorio = Math.round((Math.random() * (max - min)) + min);
+
+//   return numAleatorio;
+// }
+
+// document.write("El número aleatorio generado entre " + numMin + " y " + numMax + " es: " + aleatorio(numMin, numMax));
+
+
+// Ejercicio 6
+// Crea una función que genere 100 números aleatorios entre 1 y 1000 que no se repitan y luego muestralos por pantalla
+
+let numAleatorio = Math.floor(Math.random() * (1000 - 1) + 1);
+let arrAleatorio = [];
+
+function generarAleatorio() {
   debugger;
-  do {
-    numAnt = numFib;
-    numFib = numFib + numAnt;
-    console.log(numFib + " " + numAnt);
-  } while (numFib <= num);
+
+  for (let i = 0; i <= arrAleatorio.length; i++) {
+    if (numAleatorio != arrAleatorio[i]) {
+      arrAleatorio = arrAleatorio.push(numAleatorio);
+    }
+    document.write(numAleatorio, arrAleatorio[i]);
+  }
+  return arrAleatorio;
 }
+
+console.log(arrAleatorio);
+let resultado = generarAleatorio();
+document.write(arrAleatorio);
