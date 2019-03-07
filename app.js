@@ -565,21 +565,27 @@
 // Ejercicio 6
 // Crea una función que genere 100 números aleatorios entre 1 y 1000 que no se repitan y luego muestralos por pantalla
 
-let numAleatorio = Math.floor(Math.random() * (1000 - 1) + 1);
+'use strict';
+
 let arrAleatorio = [];
+let contador = 0;
 
 function generarAleatorio() {
-  debugger;
 
-  for (let i = 0; i <= arrAleatorio.length; i++) {
-    if (numAleatorio != arrAleatorio[i]) {
-      arrAleatorio = arrAleatorio.push(numAleatorio);
+  do {
+    let numAleatorio = Math.floor(Math.random() * (1000 - 1) + 1);
+    console.log(numAleatorio);
+    const existe = arrAleatorio.includes(numAleatorio);
+    if (!existe) {
+      arrAleatorio.push(numAleatorio);
+      contador++;
     }
-    document.write(numAleatorio, arrAleatorio[i]);
-  }
+
+    console.log(arrAleatorio);
+  } while (contador < 100);
   return arrAleatorio;
 }
 
-console.log(arrAleatorio);
-let resultado = generarAleatorio();
+generarAleatorio();
 document.write(arrAleatorio);
+
